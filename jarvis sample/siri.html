@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Siri Waveform</title>
+    <script src="https://cdn.jsdelivr.net/npm/siriwave/dist/siriwave.min.js"></script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: #000;
+        }
+        #siri-container {
+            width: 800px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="siri-container"></div>
+
+    <script>
+        const siriWave = new SiriWave({
+            container: document.getElementById('siri-container'),
+            style: 'ios9', // 'ios', 'ios9', or 'wireframe'
+            speed: 0.02,
+            amplitude: 1,
+            frequency: 6,
+            color: '#0af',
+            cover: true,
+            autostart: true,
+        });
+    </script>
+</body>
+</html>
