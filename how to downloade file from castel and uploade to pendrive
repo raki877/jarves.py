@@ -1,0 +1,27 @@
+requeriment softwate = Download VLC player for Windows
+                       Download FFmpeg for Windows ; download link = https://ffmpeg.org/download.html
+                       filelist 
+
+copy the .TS formate file from castel from your androide {path = internal stroage > android > data > com.external.castel (this is the path for that)
+
+open cmd and run this cammont Verify FFmpeg is installed: = ffmpeg -version
+
+  create a filelist.txt file whixh incluade all the file name (Ex.file '0.tx' up to how many files that incluade ) 
+
+note this must be in single file
+
+python code to create that list { 
+  for i in range(1359):  # From 0 to 1358
+    filename = f"file {i}.ts"
+    with open("filelist.txt", "w") as f:
+     for i in range(1359):  # 0 to 1358
+        f.write(f"file '{i}.ts'\n")  # Writes each filename in quotes on a new line
+
+print("File 'output.txt' created with names from '0.ts' to '1358.ts'!") } 
+replace the number to your file number
+
+run this cammond in CMD = ( ffmpeg -f concat -safe 0 -i filelist.txt -c copy "merged_output.ts" )
+you get the complet video 
+
+
+- by Rakesh D
